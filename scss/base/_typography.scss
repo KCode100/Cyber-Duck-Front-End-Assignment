@@ -1,0 +1,13 @@
+body {
+  font-family: $body-font;
+  line-height: 1.7;
+}
+
+.heading-primary {
+  font-size: 2rem;
+  width: 80vw;
+  max-width: 30rem;
+  color: $white;
+  font-family: $title-font;
+  margin-bottom: 2rem;
+}
