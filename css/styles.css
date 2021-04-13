@@ -229,7 +229,30 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
   background-color: #1d3142;
+}
+
+.navigation__lg {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.navigation__sm {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .navigation__list {
@@ -243,7 +266,7 @@ body {
 .navigation__link {
   display: block;
   padding: 1.4rem 2rem;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   text-decoration: none;
   color: #f0f0f0;
 }
@@ -253,7 +276,22 @@ body {
   background-color: #132433;
 }
 
+@media only screen and (min-width: 56.25em) {
+  .navigation__link {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  .navigation__link {
+    font-size: 1.6rem;
+  }
+}
+
 @media (max-width: 600px) {
+  .navigation {
+    display: block;
+  }
   .navigation__list {
     position: fixed;
     margin: auto;
@@ -277,6 +315,78 @@ body {
   }
 }
 
+.navigation-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.navigation-side__item {
+  border-bottom: 3px solid transparent;
+  padding: 1.2rem 2rem;
+}
+
+.navigation-side__item:first-child {
+  margin-right: 2rem;
+}
+
+.navigation-side__item:hover {
+  border-bottom: 3px solid #f58345;
+  background-color: #132433;
+}
+
+.navigation-side__link {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 1.4rem;
+  display: block;
+  height: 100%;
+}
+
+@media only screen and (min-width: 56.25em) {
+  .navigation-side__link {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  .navigation-side__link {
+    font-size: 1.6rem;
+  }
+}
+
+.navigation-side__img {
+  -webkit-transform: translateY(30%);
+          transform: translateY(30%);
+  margin-right: 1rem;
+  width: 1.8rem;
+  height: auto;
+}
+
+@media only screen and (min-width: 56.25em) {
+  .navigation-side__img {
+    width: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .navigation-side {
+    display: none;
+  }
+}
+
 .search {
   position: relative;
   display: none;
@@ -294,6 +404,7 @@ body {
   border: none;
   border-radius: 3rem;
   outline: none;
+  border: 3px solid transparent;
 }
 
 .search__input:focus {
@@ -400,6 +511,14 @@ body {
           align-items: center;
 }
 
+@media only screen and (min-width: 37.5em) {
+  .tour {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
 .tour__img-container {
   max-width: 30rem;
 }
@@ -420,6 +539,14 @@ body {
   font-weight: 700;
 }
 
+@media only screen and (min-width: 75em) {
+  .tour__title {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+}
+
 .tour__date {
   display: block;
   color: #8aa460;
@@ -433,6 +560,12 @@ body {
   font-size: 1.4rem;
   margin-bottom: 1.4rem;
   max-width: 20rem;
+}
+
+@media only screen and (min-width: 37.5em) {
+  .tour__text {
+    text-align: left;
+  }
 }
 
 .footer__navigation {
@@ -604,5 +737,19 @@ body {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+}
+
+@media only screen and (min-width: 37.5em) {
+  .section-contact {
+    min-height: 50vh;
+    background: url("../images/medium/bg-green-md.png") top/cover no-repeat;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  .section-contact {
+    min-height: 60vh;
+    background: url("../images/large/bg-green-lg.png") top/cover no-repeat;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

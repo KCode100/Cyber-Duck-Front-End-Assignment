@@ -36,4 +36,12 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  @include respond(tab-port) {
+    min-height: 50vh;
+    background: url("../images/medium/bg-green-md.png") top/cover no-repeat;
+  }
+  @include respond(desktop) {
+    min-height: 60vh;
+    background: url("../images/large/bg-green-lg.png") top/cover no-repeat;
+  }
 }

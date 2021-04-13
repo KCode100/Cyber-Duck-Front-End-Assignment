@@ -13,6 +13,7 @@
     border: none;
     border-radius: 3rem;
     outline: none;
+    border: 3px solid transparent;
     &:focus {
       border: 3px solid $orange;
     }

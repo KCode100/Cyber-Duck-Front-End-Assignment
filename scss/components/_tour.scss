@@ -6,6 +6,10 @@
   justify-content: center;
   align-items: center;
 
+  @include respond(tab-port) {
+    align-items: flex-start;
+  }
+
   &__img-container {
     max-width: 30rem;
   }
@@ -21,7 +25,9 @@
     font-size: 2rem;
     color: $blue-dark;
     font-weight: 700;
-    // order: -1;
+    @include respond(desktop) {
+      order: -1;
+    }
   }
   &__date {
     display: block;
@@ -29,13 +35,14 @@
     text-transform: uppercase;
     margin-top: 0.6rem;
     font-size: 1.2rem;
-    // flex: 1;
   }
   &__text {
     text-align: center;
     font-size: 1.4rem;
     margin-bottom: 1.4rem;
     max-width: 20rem;
-    // flex: 1;
+    @include respond(tab-port) {
+      text-align: left;
+    }
   }
 }
