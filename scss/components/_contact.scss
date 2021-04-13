@@ -1,0 +1,10 @@
+.contact {
+  width: 85vw;
+  max-width: 55rem;
+
+  &__text {
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    color: $blue;
+  }
+}

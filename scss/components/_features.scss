@@ -7,21 +7,24 @@
   background-color: $white;
   margin: -1.2rem auto 0;
   z-index: 10000;
-  max-width: 75vw;
-  padding-top: 1rem;
+  max-width: 80vw;
+  padding: 1rem 0 3rem;
+
+  @include respond(tab-port) {
+    margin-bottom: 4rem;
+  }
 }
 
 .feature {
   text-align: center;
   padding: 1.2rem 1.5rem;
-  max-width: 30rem;
+  max-width: 25rem;
 
   &__img {
     width: 5rem;
     height: auto;
   }
   &__text {
-    color: $text;
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
   }
@@ -33,6 +36,7 @@
     font-weight: 600;
     font-size: 1.2rem;
     color: $orange;
+    transition: all 0.2s;
 
     &::before,
     &::after {
@@ -41,7 +45,7 @@
       width: 80%;
       height: 1px;
       content: "";
-      background-color: $text;
+      background-color: rgba($text, 0.2);
       overflow: hidden;
       pointer-events: none;
     }
@@ -51,6 +55,23 @@
     }
     &::after {
       margin-left: 1rem;
+    }
+
+    &:hover {
+      color: $blue-dark;
+      &::before,
+      &::after {
+        background-color: $orange;
+      }
+    }
+  }
+
+  @include respond(tab-port) {
+    &__text {
+      font-size: 1.6rem;
+    }
+    &__link {
+      font-size: 1.4rem;
     }
   }
 }

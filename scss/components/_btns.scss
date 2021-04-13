@@ -1,20 +1,42 @@
 .btn {
-  display: block;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  cursor: pointer;
-  border-radius: 10rem;
-  padding: 1rem 0;
-  font-size: 1.2rem;
-
+  &:link,
+  &:active,
+  &:visited {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 10rem;
+    padding: 0.8rem 0;
+    font-size: 1.2rem;
+    transition: all 0.2s;
+    outline: none;
+  }
   &--primary {
     background-color: $orange;
     width: 14rem;
     color: $white;
     margin: auto;
+    @include respond(tab-port) {
+      font-size: 1.4rem !important;
+      width: 16rem;
+    }
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 1rem 2rem rgba($blue-dark, 0.2);
+    }
+
+    &:active {
+      transform: translateY(-1px);
+      box-shadow: 0 0.5rem 1rem rgba($blue-dark, 0.2);
+    }
   }
   &--secondary {
     background-color: transparent;
+    color: $blue;
+    border: 1px solid $blue;
+    width: 13rem;
   }
 }

@@ -1,18 +1,24 @@
 .hero-img {
   position: relative;
   min-height: 60vh;
-  background-image: linear-gradient(
-      to right bottom,
-      rgba($blue, 0.4),
-      rgba($blue-dark, 0.7)
-    ),
-    url("../images/small/banner-sm.jpg");
+  background-image: url("../images/small/banner-sm.jpg");
   background-size: cover;
   background-position: right;
   background-repeat: no-repeat;
   //   filter: sepia(100%) hue-rotate(180deg) saturate(1.5);
   //   brightness(0.8)
+  filter: sepia(25%) hue-rotate(175deg) saturate(4.5) contrast(0.9)
+    brightness(0.7);
   z-index: -100;
+
+  @include respond(tab-port) {
+    background-image: url("../images/medium/banner-md.jpg");
+    min-height: 70vh;
+  }
+  @include respond(desktop) {
+    background-image: url("../images/large/banner-lg.jpg");
+    min-height: 85vh;
+  }
 }
 .hero-text {
   position: absolute;
