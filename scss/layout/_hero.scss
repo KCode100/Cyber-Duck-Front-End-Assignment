@@ -13,7 +13,7 @@
 
   @include respond(tab-port) {
     background-image: url("../images/medium/banner-md.jpg");
-    min-height: 70vh;
+    min-height: 80vh;
   }
   @include respond(desktop) {
     background-image: url("../images/large/banner-lg.jpg");
@@ -23,7 +23,10 @@
 .hero-text {
   position: absolute;
   text-align: center;
-  top: 50%;
+  top: 30%;
   left: 50%;
-  transform: translate(-50%, -60%);
+  transform: translateX(-50%);
+  @include respond(tab-port) {
+    top: 45%;
+  }
 }

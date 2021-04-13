@@ -38,5 +38,10 @@
     color: $blue;
     border: 1px solid $blue;
     width: 13rem;
+
+    &:hover {
+      border-color: $orange;
+      border-radius: 0.8rem;
+    }
   }
 }

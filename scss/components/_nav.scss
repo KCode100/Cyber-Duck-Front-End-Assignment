@@ -1,0 +1,47 @@
+.navigation {
+  display: flex;
+  background-color: $blue-dark;
+  &__list {
+    list-style-type: none;
+  }
+  &__item {
+    display: inline-block;
+  }
+  &__link {
+    display: block;
+    padding: 1.4rem 2rem;
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: $grey-light;
+
+    &:hover {
+      color: $orange;
+      background-color: $blue-dark2;
+    }
+  }
+
+  @media (max-width: 600px) {
+    &__list {
+      position: fixed;
+      margin: auto;
+      width: 100%;
+      padding-bottom: 0;
+      background-color: $blue-dark;
+      z-index: 1000;
+      height: 0px;
+      overflow: hidden;
+    }
+
+    &__item {
+      display: block;
+      width: 80%;
+      &:not(:first-child) {
+        border-top: 1px solid $text;
+      }
+      margin: auto;
+    }
+    &__link:hover {
+      background-color: transparent;
+    }
+  }
+}

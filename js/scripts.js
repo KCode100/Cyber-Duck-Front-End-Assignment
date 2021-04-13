@@ -1,5 +1,6 @@
 // Scripts
 
+// QUOTES TRANSITION
 const quotesEl = document.getElementById('quotes');
 const quotes = [
     '“Any fool can write code that a computer can understand. Good programmers write code that humans can understand.”',
