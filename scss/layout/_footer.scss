@@ -1,56 +1,146 @@
 .footer {
   &__navigation {
     position: relative;
+    display: grid;
+    grid-template-areas:
+      "main social"
+      "subscribe subscribe";
+    grid-template-rows: 1fr 10rem;
     background-color: $blue;
+    padding: 3rem;
+    @include respond(tab-port) {
+      grid-template-areas:
+        "main social"
+        "main subscribe";
+      grid-template-rows: 1fr 0;
+    }
   }
-  &__list {
-  }
-  &__item {
-  }
-  &__link {
-    text-decoration: none;
-    color: $grey-light;
-  }
+
   &__img {
     position: absolute;
     bottom: 0;
     background: url("../images/small/bg-blue-sm.png") center/cover no-repeat;
     width: 100%;
-    height: 10rem;
+    height: 30%;
+    z-index: 0;
+    pointer-events: none;
+    @include respond(tab-port) {
+      height: 100%;
+      background: url("../images/medium/bg-blue-md.png") center/cover no-repeat;
+    }
+    @include respond(desktop) {
+      background: url("../images/large/bg-blue-lg.png") center/cover no-repeat;
+    }
   }
 }
-.copyright {
-  position: relative;
-  background-color: $blue-dark2;
-  padding: 3rem;
-  text-align: center;
+.footer-nav {
+  grid-area: main;
+
+  &__list {
+    max-width: 40rem;
+    list-style-type: none;
+    column-count: 1;
+    margin: auto;
+    @include respond(tab-port) {
+      column-count: 2;
+      column-gap: 8rem;
+    }
+  }
+  &__item {
+    text-align: center;
+    padding: 0.5rem;
+  }
+  &__link {
+    text-decoration: none;
+    color: $grey-light;
+    font-size: 1.4rem;
+    cursor: pointer;
+    padding: 0.5rem;
+
+    &:hover {
+      border-bottom: 1px solid $orange;
+    }
+  }
+}
+
+.social-links {
+  grid-area: social;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2rem;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  margin: 0 auto;
 
-  &__text {
-    color: rgba($grey-light, 0.5);
-    min-width: 50%;
+  &__list {
+    list-style-type: none;
+  }
+  &__item {
+    margin: 1rem;
+    @include respond(tab-port) {
+      display: inline-block;
+    }
+  }
+  &__link {
+  }
+  &__img {
+    width: 3.5rem;
+    height: auto;
+    &:hover {
+      filter: brightness(1.5);
+    }
   }
 }
 
-.company-link {
-  display: block;
-  color: rgba($grey-light, 0.5);
-  min-width: 50%;
-  &:hover {
-    color: $white;
-  }
+.user-subscribe {
+  position: relative;
+  display: inline-block;
+  z-index: 10000;
 }
+.subscribe {
+  margin: 1.6rem auto 0;
+  grid-area: subscribe;
 
-.scroll-up {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  &__label {
+    display: block;
+    color: $grey-light;
+    font-size: 1.4rem;
+  }
+  &__input {
+    border: 3px solid transparent;
+    outline: none;
+    padding: 1rem 1.2rem;
+    border-radius: 10rem;
+    width: 25rem;
+    font-size: 1.4rem;
+    transition: all 0.2s;
+    z-index: 1000;
 
-  width: 4rem;
-  height: auto;
+    &:focus {
+      border: 3px solid $orange;
+      border-radius: 3px;
+
+      & + input {
+        border-radius: 3px;
+      }
+    }
+  }
+  &__btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 90%;
+    transform: translate(-2px, 5%);
+    background-color: $green;
+    color: $grey-light;
+    border-radius: 10rem;
+    padding: 0.5rem 1.2rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    transition: all 0.2s;
+  }
+  @include respond(tab-port) {
+    transform: translateY(-10rem);
+  }
 }

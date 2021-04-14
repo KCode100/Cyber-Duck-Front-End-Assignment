@@ -1,0 +1,25 @@
+.copyright {
+  position: relative;
+  background-color: $blue-dark2;
+  padding: 3rem;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+
+  &__text {
+    color: rgba($grey-light, 0.5);
+    min-width: 50%;
+  }
+}
+
+.company-link {
+  display: block;
+  color: rgba($grey-light, 0.5);
+  min-width: 50%;
+  &:hover {
+    color: $white;
+  }
+}

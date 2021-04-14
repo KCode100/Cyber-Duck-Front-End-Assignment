@@ -41,7 +41,6 @@
     background: url("../images/medium/bg-green-md.png") top/cover no-repeat;
   }
   @include respond(desktop) {
-    min-height: 60vh;
     background: url("../images/large/bg-green-lg.png") top/cover no-repeat;
   }
 }
