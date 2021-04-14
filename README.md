@@ -6,14 +6,14 @@ Hi Ramon,
 Thanks for the opportunity.
 I had a great time coding!
 
-[View Project](https://kcode100.github.io/Cyber-Ducks-Front-End-Assignment/)
+[View Project ↗️](https://kcode100.github.io/Cyber-Ducks-Front-End-Assignment/) 
 
 ### Goals
 
 - To produce a website identical to the proofs provided
 - To achieve a perfect lighthouse scoring whilst adhering to the design received
 
-### Achievement
+### 👍 Achievement
 
 - Mobile first design
 - Quotes slider
@@ -30,6 +30,6 @@ I had a great time coding!
 
 Filtering of greyscale images.
 
-### Details
+### 🕖 Details
 
 12 hours of fun coding spent on assignment.
