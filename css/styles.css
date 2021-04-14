@@ -363,11 +363,17 @@ body {
     position: fixed;
     margin: auto;
     width: 100%;
-    padding-bottom: 0;
     background-color: #1d3142;
     z-index: 1000;
-    height: 0px;
     overflow: hidden;
+  }
+  .navigation .nav-closed {
+    padding-bottom: 0;
+    height: 0px;
+  }
+  .navigation .nav-open {
+    padding-bottom: 1rem;
+    height: auto;
   }
   .navigation__item {
     display: block;
@@ -554,7 +560,16 @@ body {
 
 .togglers__menu {
   width: 1.8rem;
-  height: auto;
+  height: 1.8rem;
+  display: inline-block;
+}
+
+.togglers__menu--open {
+  background: url("../images/icon-menu.png") center/cover no-repeat;
+}
+
+.togglers__menu--close {
+  background: url("../images/icon-close.png") center/cover no-repeat;
 }
 
 @media only screen and (min-width: 37.5em) {

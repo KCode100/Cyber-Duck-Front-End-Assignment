@@ -44,11 +44,17 @@
       position: fixed;
       margin: auto;
       width: 100%;
-      padding-bottom: 0;
       background-color: $blue-dark;
       z-index: 1000;
-      height: 0px;
       overflow: hidden;
+    }
+    .nav-closed {
+      padding-bottom: 0;
+      height: 0px;
+    }
+    .nav-open {
+      padding-bottom: 1rem;
+      height: auto;
     }
 
     &__item {

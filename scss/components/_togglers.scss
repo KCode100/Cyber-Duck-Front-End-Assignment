@@ -8,7 +8,14 @@
   }
   &__menu {
     width: 1.8rem;
-    height: auto;
+    height: 1.8rem;
+    display: inline-block;
+    &--open {
+      background: url("../images/icon-menu.png") center/cover no-repeat;
+    }
+    &--close {
+      background: url("../images/icon-close.png") center/cover no-repeat;
+    }
   }
   @include respond(tab-port) {
     display: none;
